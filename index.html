@@ -12,30 +12,35 @@
 
 <body>
     <div class="main-container">
-        <header class="header">
+        <header class="header" id="header">
             <h1 class="header__title">Color game V2</h1>
-            <a href="#" class="button button--play">Click to Play!</a>
+            <a href="#menu" class="button button--play">Click to Play!</a>
         </header>
 
         <main>
-            <section class="menu">
+            <section class="menu" id="menu">
                 <span class="menu__message">Choose level of dificulty:</span>
                 <button class="button menu__btn">Easy</button>
-                <button class="button menu__btn">Medium</button>
+                <button class="button menu__btn selected">Medium</button>
                 <button class="button menu__btn">Hard</button>
+                <a href="#header" class="menu__close">&times;</a>
             </section>
 
             <section class="circles">
-                <div class="circles__circle--up"></div>
-                <div class="circles__circle--up"></div>
-                <div class="circles__circle--up"></div>
-                <div class="circles__circle--down"></div>
-                <div class="circles__circle--down"></div>
-                <div class="circles__circle--down"></div>
+                <div class="circles__circle"></div>
+                <div class="circles__circle"></div>
+                <div class="circles__circle"></div>
+                <div class="circles__circle"></div>
+                <div class="circles__circle"></div>
+                <div class="circles__circle"></div>
             </section>
         </main>
 
     </div>
+
+    <script src="index.js"></script>
 </body>
+
+
 
 </html>
