@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <title>Color Game Project V2</title>
 </head>
+
 <body>
-    <header class="header">
-        <h1 class="header__title">The great color game (V2)</h1>
-        <button class="btn">Click to Play!</button>
-    </header>
+    <div class="main-container">
+        <header class="header">
+            <h1 class="header__title">Color game V2</h1>
+            <a href="#" class="button button--play">Click to Play!</a>
+        </header>
 
-    <section class="menu">
-        <span class="menu__message">Pick a game mode:</span>
-        <button class="menu__btn-1">Easy</button>
-        <button class="menu__btn-2">Medium</button>
-        <button class="menu__btn-3">Hard</button>
-    </section>
+        <main>
+            <section class="menu">
+                <span class="menu__message">Choose level of dificulty:</span>
+                <button class="button menu__btn">Easy</button>
+                <button class="button menu__btn">Medium</button>
+                <button class="button menu__btn">Hard</button>
+            </section>
 
-    <section class="circles">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </section>
+            <section class="circles">
+                <div class="circles__circle--up"></div>
+                <div class="circles__circle--up"></div>
+                <div class="circles__circle--up"></div>
+                <div class="circles__circle--down"></div>
+                <div class="circles__circle--down"></div>
+                <div class="circles__circle--down"></div>
+            </section>
+        </main>
+
+    </div>
 </body>
+
 </html>
