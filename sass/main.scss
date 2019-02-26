@@ -4,6 +4,7 @@ $color-primary-light: #c6dee9;
 $color-primary-dark: #099fcc;
 
 $color-orange: #ffa500;
+$color-green: #36b90e;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
@@ -73,7 +74,7 @@ $color-black: #000;
 }
 
 html {
-    height: 100vh;
+    height: 108vh;
     font-size: 62.5%;
 }
 
@@ -81,13 +82,14 @@ body {
     font-family: Lato, sans-serif;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 6rem 8rem;
     box-sizing: border-box;
     
 }
 
 .main-container {
-    height: 90vh;
+    height: 95vh;
     border-radius: 6px;
     background-color: $color-grey-light-2;
     box-shadow: 0 2rem 6rem rgba($color-black, .2);
@@ -215,10 +217,34 @@ body {
     
 }
 
+.selected {
+    background-color: $color-green;
+    color: $color-white;
+}
+
+.color {
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &__random {
+        padding-bottom: 3rem;
+        display: block;
+        text-transform: uppercase;
+        color: $color-grey-dark-3;
+        letter-spacing: .5rem;
+        font-size: 3rem;
+        font-weight: 100;
+    }
+}
+
 .circles {
     width: 60%;
     padding: 3rem 0;
-    top: 68%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -226,7 +252,7 @@ body {
 
     &__circle {
         border-radius: 50%;
-        background-color: $color-orange;
+        background: $color-orange;
         width: 20rem;
         height: 20rem;
         margin-top: 3rem;
