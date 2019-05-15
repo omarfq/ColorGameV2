@@ -1,20 +1,3 @@
-// This program will do the following:
-// Once the user clicks the Easy / Medium / Hard mode button:
-// 1. a random rgb color will be displayed (below the menu) 
-// 2. circles will appear with random colors (one of them will have the value of the random rgb color displayed above). 
-// 3. The "Click to play" button should change its text to say "New colors"
-//      3a. when clicked, a new random rgb color should be displayed
-//      3b. the circles should also change accordingly. 
-// If the user chooses the wrong circle:
-// 1. the circle should turn to its other side where the word "Incorrect" with a red background should be displayed
-//      1a. the circle will disappear. 
-// If the user guesses correctly: 
-// 1. the remaining circles will change colors to the same rgb color guessed by the user (rgb color displayed above) 
-// 2. the background of the body should also change to that particular color 
-// 3. the text on the main button should display "Play again?" and if clicked: 
-//      3a. it should reset everything
-// 4. below the random rgb color a mesage saying "Correct!" in green should be displayed.
-
 // SELECTORS
 const colorDisplay = document.querySelector('.color__random');
 const mode = document.querySelectorAll('.menu__btn');
@@ -45,13 +28,6 @@ function removeColor() {
 }
 removeColor();
 
-
-// 2. circles will appear with random colors (one of them will have the value of the random rgb color displayed above). 
-// If game mode is Easy then 3 circles will appear, if game mode is Medium then 6 circles will appear,
-// and finally if game mode is Hard then 9 circles will appear
-// For this to work, I need: 
-// a. a numberOfSquares variable
-
 let numberOfSquares = 6;
 function setupGameMode() {
     for (let i = 0; i < mode.length; i++) {
@@ -77,7 +53,7 @@ function setupGameMode() {
 }
 setupGameMode();
 
-// 2a. Generate random colors for the circles
+// Generate random colors for the circles
 let colors = [];
 function generanteRandomColors(numSquares) {
     // Create an array
@@ -132,22 +108,12 @@ resetButton.addEventListener('click', () => {
     reset();
 });
 
-// 3. In this step, we're going to setup the squares: We should pick a color from the colors array,
-// compare it to the color that the user picked and determine if its correct or not
-// The following function will be needed:
-// pickColor - will pick a random color from the colors array and return it
-// changeColors - it will accept the picked color as an argument and will change the background color
-// of the other circles to the picked color
-// setupSquares - this function will set up all squares and will call the previous functions
-
 function pickColor() {
     // Pick a position within the colors array (this random position contains a color)
     let random = Math.floor(Math.random() * colors.length);
     // Return the color on index random
     return colors[random];
 }
-
-
 
 function ChangeColors(color) {
     // Change the color of each of the circles to the picked color
