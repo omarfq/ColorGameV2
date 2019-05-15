@@ -20,9 +20,11 @@ or
 npm install node-sass --save-dev
 ```
 
-## Deployment
+## What's left to do
 
-This project has not been Deployed yet.
+1. Add responsivenes to application
+2. Add CSS Grid for a better organized Layout
+3. Tweak the logic to make it a little bit more intuitive
 
 ## Technologies used in this Project
 
